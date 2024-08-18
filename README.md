@@ -1,0 +1,1 @@
+for ci/ci pipeline .github folder was required.
