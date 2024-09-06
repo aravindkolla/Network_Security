@@ -12,5 +12,6 @@ fastapi
 uvicorn
 ipykernel
 apache-airflow
+python-multipart
 
 -e .

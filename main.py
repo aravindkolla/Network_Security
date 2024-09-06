@@ -71,7 +71,7 @@ async def train_route():
     except Exception as e:
             raise NetworkSecurityException(e,sys)
     
-'''
+
 @app.post("/predict")
 async def predict_route(request: Request,file: UploadFile = File(...)):
     try:
@@ -85,20 +85,20 @@ async def predict_route(request: Request,file: UploadFile = File(...)):
         df['predicted_column'] = y_pred
         df['predicted_column'].replace(-1, 0)
         #return df.to_json()
-        table_html = df.to_html(classes='table table-striped')
+        #table_html = df.to_html(classes='table table-striped')
         #print(table_html)
-        return templates.TemplateResponse("table.html", {"request": request, "table": table_html})
+        #return templates.TemplateResponse("table.html", {"request": request, "table": table_html})
         
     except Exception as e:
             raise NetworkSecurityException(e,sys)
-
+'''
 def main():
     try:
         training_pipeline = TrainingPipeline()
         model = training_pipeline.run_pipeline(model_dir=SAVED_MODEL_DIR) 
     except Exception as e:
             raise NetworkSecurityException(e,sys)
-
- '''              
+'''
+               
 if __name__=="__main__":
     app_run(app, host="localhost", port=8000)

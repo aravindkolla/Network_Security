@@ -1,4 +1,3 @@
-'''
 from asyncio import tasks
 import json
 from textwrap import dedent
@@ -62,4 +61,3 @@ with DAG(
 
     download_input_files >> generate_prediction_files >> upload_prediction_files
 
-    '''
